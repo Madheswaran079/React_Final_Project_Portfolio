@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+#about
+{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+#about h1
+{
+    padding-top: 60px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#display
+{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+img {
+    margin-top: 10px;
+    height: 50vh;
+    width: 30vh;
+}
+#about h6
+{
+    padding-left: 10%;
+    font-family: 'Kanit', sans-serif;
+}

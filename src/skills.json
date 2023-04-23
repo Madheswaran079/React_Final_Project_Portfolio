@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "img": "image.png",
+        "skill": "React",
+        "level": "90%"
+    },
+    {
+        "id": 2,
+        "img": "https://imgs.search.brave.com/PYZz2YzOKrPWNm37OmwY-z5TACh-oT68Ri5swL339Pw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zZHRp/bWVzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOC8wMy9j/cHBwcC5wbmc",
+        "skill": "Cpp",
+        "level": "80%"
+    },
+    {
+        "id": 3,
+        "img": "https://imgs.search.brave.com/SS3ciVVrqIFzh8FhPooy10eSn3yeoO6B7spaV1VqnV0/rs:fit:1200:1200:1/g:ce/aHR0cDovL3BsdXNw/bmcuY29tL2ltZy1w/bmcvamF2YS1wbmct/amF2YS1pY29uLTE2/MDAucG5n",
+        "skill": "Java",
+        "level": "70%"
+    },
+    {
+        "id": 4,
+        "img": "https://imgs.search.brave.com/zCBua5AJdy5aBUO-JWNAgvS-gn_nfLN3CHzzbUAhLuk/rs:fit:1024:1024:1/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvc21hc2hpY29u/cy1maWxlLXR5cGVz/LWZsYXQvNTYvMjJf/LV9IVE1MX0ZpbGVf/RmxhdC0xMDI0LnBu/Zw",
+        "skill": "DBMS",
+        "level": "90%"
+    }
+]
+
+const [data, setData] = useState([]);
+
+useEffect(() => {
+  const fetchData = async () => {
+    const result = await fetch('https://mocki.io/v1/b56845d7-8e49-464f-ad1f-6ccc3a60d461');
+    const data = await result.json();
+    setData(data);
+  };
+  fetchData();
+}, []);
+
+import React, { useEffect, useState } from 'react';
+
+<Grid container spacing={5} textAlign='center'>
+                {data.map(({ id, img, skill, level }) => (
+                    <Grid key={id} item sm={6} md={4} lg={3}>
+                    <div>
+                        {/* <img class="img-thumbnail" src={img} alt=" " /> */}
+                        <h6>{skill}</h6>
+                        <p>{level}</p>
+                    </div>
+                    </Grid>
+                ))}
+                </Grid>

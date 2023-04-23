@@ -1,0 +1,35 @@
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+#cs
+{
+    background-color: black;
+    color: white;
+    height:100%;
+    width:100%;
+}
+#cs h1{
+  text-align: center;
+  padding-top: 60px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
